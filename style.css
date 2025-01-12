@@ -1,0 +1,968 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Playwrite+CO+Guides&family=Playwrite+IE+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color:#00abf0;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo
+{
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.navbar{
+    position: relative;
+}
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+#menu-icon {
+position: relative;
+font-size: 3.6rem;
+color: var(--text-color);
+cursor: pointer;
+display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('./nishant.jpg') no-repeat;
+    background-size: cover;
+    background-position: 100% 30%;
+}
+.home-content
+{
+    max-width: 60rem;
+    z-index: 99;
+}
+.home-content h1{
+    position: relative;
+    display: inline-block;
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content h1 span{
+    color: var(--text-color);
+}
+.home-content .text-animate
+{
+    position: relative;
+    width: 32.8rem;
+}
+
+.home-content .text-animate h2{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color),var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+.home .show-animate .home-content .text-animate h2{
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+
+}
+.home-content .text-animate h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 20%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
+}
+.home-content p{
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+
+.btn-box
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+.btn-box .btn{
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box .btn:hover{
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2){
+    background-color: transparent;
+    color: var(--main-color);
+
+}
+.btn-box .btn:nth-child(2)::before{
+    background-color: var(--main-color);
+    
+}
+.btn-box .btn:nth-child(2):hover{
+    color: var(--bg-color);
+
+}
+.btn-box .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box .btn:hover::before{
+    width: 100%;
+
+}
+.home-sci{
+        position: absolute;
+        bottom: 4rem;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+.imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.imgHover:hover{
+    background-color: var(--bg-color);
+    opacity: .8;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--second-bg-color);
+    padding-bottom: 6rem;
+
+}
+.heading
+{
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+span{
+    color: var(--main-color);
+}
+
+.about-img {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    
+    height: 100%; /* Optional: Ensure the parent container has sufficient height */
+    position: relative; /* Allows positioning of the spinning circle */
+}
+.about-img img {
+    max-width: 100%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover; /* Ensures the image fills the circle */
+    border-radius: 50%; /* Makes the image circular */
+    border: .2rem solid var(--main-color);
+    position: relative; /* Keeps the image inside the spinning circle */
+}
+.about-img .circle-spin{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(0);
+    width:  390px;
+    height: 390px; 
+    border-radius: 50%;
+    border-top: .2rem solid rgb(0, 0, 0);
+    border-bottom: .2rem solid rgb(30, 6, 6);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
+}
+.about-content{
+    text-align: center;
+
+}
+.about-content h2{
+    position: abrelative;
+    display: inline-block;
+    font-size: 2.6rem;
+}
+.about-content p{
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.btn-box.btns{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+}
+.btn-box.btns a::before{
+background-color: var(--second-bg-color);
+}
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education .education-column {
+    position: relative;
+    overflow: visible;
+    flex: 1 1 40rem; 
+}
+
+ .education-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+.education-column .education-bx{
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+}
+.education-bx .education-content{
+    position: relative;
+    padding-left: 2rem;
+} 
+.education-bx .education-content::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        background: var(--main-color);
+        border-radius: 50%;
+        left: -1.1rem;
+}
+.education-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6em;
+    margin-bottom: 2rem;
+}
+
+.education-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color:var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.education-content .content:hover::before{
+    width: 100%;
+}
+.education-content .content .year{
+    font-size: 1.2em;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+
+}
+.education-content .content .year h2{
+    font-size: 2rem;
+    color: white;
+
+}
+.education-content .content .year .bx 
+{
+    gap: .5rem;
+    color: #ededed;
+    font-size: 1.7rem;
+
+}
+.education-content .content .year{
+    padding-left: .5rem;
+
+}
+.education-content .content p{
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}
+.skills {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--second-bg-color);
+}
+.skills h2{
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills .skills-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-row .skills-column {
+    flex: 1 1 40rem;
+}
+
+.skills-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content {
+    position: relative;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.6rem;
+    padding: 0.5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.skills-box .skills-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.skills-box .skills-content:hover::before {
+        width: 100%;
+}
+
+.skills-content .progress {
+    padding: 1rem 0;
+}
+
+.skills-content .progress h2 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.skills-content .progress h2 span {
+    color: var(--text-color);
+}
+
+/* Optional Styling for .bar if used */
+.skills-content .progress .bar {
+   height: 2.5rem;
+   border-radius: .6rem;
+   border: .2rem solid var(--main-color);
+   padding: .5rem;
+   margin: 1rem 0;
+}
+.skills-content .progress .bar span{
+   display: block;
+   height: 100%;
+   border-radius: .3rem;
+   background: var(--main-color);
+}
+.contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+.contact .h2{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem; /* Ensures consistent spacing */
+    background: var(--bg-color);
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    flex: 1 1 calc(50% - 1rem); /* Responsive width */
+    margin: 0.8rem 0;
+    width: 49%;
+    /* color: var(--text-color);
+    background: var(--bg-color); */
+}
+
+.contact form .input-box .input-field,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent; /* Fallback for transparency */
+    border-radius: 0.6rem;
+    border: 0.2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color); /* Placeholder text color */
+    background-color: var(--bg-color);
+}
+/* .contact form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+.contact form .input-box input:focus~.focus,
+.contact form .input-box input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus {
+    width: 100%;
+} */
+
+.contact form .textarea-field
+{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.contact form .textarea-field textarea{
+    resize: none;
+}
+.contact form .btn-box .btn{
+cursor: pointer;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background:var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+
+}
+.footer-iconTop a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem ;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.footer-iconTop a::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: var(--bg-color);
+   z-index: -1;
+   transition: .5s;
+}
+.footer-iconTop a:hover:before{
+   width: 100%;
+
+}
+.footer-iconTop a{
+    font-size: 2.4rem ;
+    color: var(--bg-color);
+}
+.footer-iconTop a:hover i{
+    color: var(--main-color);
+}
+
+/* .animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    z-index: 98;
+}
+.animate {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+} */
+
+/* .animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellowgreen;
+    z-index: 1;
+    transform: translateX(0); /* Fully covers the text */
+    /*animation: slideAway 1.5s ease forwards;
+    animation-delay: calc(0.5s * var(--i))*/; Adjust delay for sequencing
+}
+
+/* Text visibility behind animation */
+/* .animate span {
+    position: relative;
+    z-index: 2; /* Keeps the text above everything 
+} */
+
+
+
+
+/* .home-content h1 .animate::before {
+    animation-delay: 0.5s;
+}
+
+.text-animate h2 .animate::before {
+    animation-delay: 1s;
+} */
+
+/* Base animation styles */
+.animate {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Ensures the animation stays within bounds */
+}
+
+/* Yellow-green overlay (pseudo-element) */
+.animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 1;
+    transform: translateX(0); /* Initial state: overlay fully covers text */
+    animation: slideAndFade 0.5s ease forwards; /* Reduced to 0.5s */
+    animation-delay: calc(0.5s * var(--i)); /* Stagger animations if needed */
+}
+
+/* Text visibility */
+.animate span {
+    position: relative;
+    z-index: 2; /* Ensures text is above overlay */
+    color: #000; /* Text color */
+}
+
+/* Overlay animation for scroll-triggered elements */
+.animate.scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%; 
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 1; 
+    transform: translateX(0); 
+    animation: slideAndFade 0.5s ease forwards; /* Adjust animation time */
+    animation-delay: calc(0.3s * var(--i));
+}
+
+.education .education-bx .animate.scroll{
+    width: 105%;
+}
+/* Keyframe animation */
+@keyframes slideAndFade {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+/* Optional delays for specific sections */
+.home-content h1 .animate::before {
+    animation-delay: 0.5s;
+}
+
+.text-animate h2 .animate::before {
+    animation-delay: 1s;
+}
+
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+.home .show-animate .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) { /* Corrected 'max-wiidth' to 'max-width' */
+    .header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home {
+        padding: 0 4%;
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+/* Initial navbar styles */
+.navbar {
+    display: flex;
+    justify-content:  right;
+    align-items: left;
+}
+
+.navbar a {
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+
+#menu-icon {
+    display: none; /* Hide the menu icon by default */
+    cursor: pointer;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    #menu-icon.bx-x {
+        /* Rotate the icon when active */
+        transform: rotate(180deg);
+    }
+
+    /* Navbar default state */
+    .navbar {
+        display: none; /* Hide navbar initially */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 4%;
+        width: 100%;
+        z-index: 1;
+        background-color: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease; /* Add transition for slide-in effect */
+    }
+
+    /* Show navbar when active */
+    .navbar.active {
+        display: flex;
+        transform: translateY(0); /* Slide down from top */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    
+    .home .imgHover{
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+    }
+}
+@media (max-width: 520px)
+{
+    html{
+        font-size: 50%;
+    }
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-sci{
+        width: 160px;
+        flex-direction: column;
+    }
+    .home-sci a{
+        width: 38px;
+        height: 38px;
+    }
+}
+@media (max-width: 462px) {
+    .home-content h1 {
+       font-size: 5.2rem; /* Adjusted font size for smaller screens */
+    }
+    .education {
+       padding: 10rem 4% 5rem 5%; /* Ensure consistent spacing */
+    }
+    .contact form .input-box .input-field {
+       width: 100%; /* Makes input fields occupy full width */
+    }
+    .footer {
+       flex-direction: column-reverse; /* Stack footer elements vertically in reverse order */
+    }
+    .footer p {
+       margin-top: 2rem; /* Add spacing between footer elements */
+       text-align: center;
+    }
+ }
+ @media (max-width: 371px) {
+    .home {
+        justify-content: center;
+        padding: 60px 20px;
+        clip-path: ellipse(100% 90% at 50% 0%); /* Curve effect for smaller screens */
+        overflow: hidden; /* Prevent content overflow */
+    }
+
+    body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 
+                 env(safe-area-inset-bottom) env(safe-area-inset-left);
+        margin: 0;
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px; /* Add spacing between elements */
+    }
+
+    .home-content h1 {
+        font-size: 2rem; /* Adjust font size for better readability */
+    }
+
+    .btn-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    .home-sci {
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* Add spacing between social media icons */
+        margin-top: 20px; /* Space between buttons and icons */
+    }
+
+    .home-sci a {
+        font-size: 1.5rem; /* Adjust icon size */
+    }
+}
+
+@keyframes homeBgText{
+    0%,
+    10%,
+    100%{
+        background-position:-33rem 0;
+    }
+    65%,
+    85%{
+        background-position:0 0;
+    }
+}
+@keyframes homeCursorText{
+    0%,
+    10%,
+    100%{
+        width: 0;
+    }
+    65%,
+    78%,
+    85%{
+        width: 100%;
+        opacity: 1;
+    }
+    75%,
+    81%{
+        opacity: ;
+    }
+}
+
+@keyframes aboutSpinner{
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+/* @keyframes slideAway {
+    0% {
+        transform: translateX(0); /* Fully covers the text */
+    }
+    /* 100% {
+        transform: translateX(100%); /* Moves out of view */
+    /* } 
+} *?
